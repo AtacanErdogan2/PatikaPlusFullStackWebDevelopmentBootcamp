@@ -9,16 +9,19 @@ public class Main {
 
         // Calculation Section
 
-        for (int i = 2; i <=100; i++) {
+        for (int i = 2; i <= 100; i++) {
+
             for (int j = 2; j < i; j++) {
-                if( i % j == 0) {
+                if (i % j == 0) {
                     counter++;
                 }
             }
-            if( counter == 0) {
+
+            if (counter == 0) {
                 System.out.print(i + " ");
             }
             counter = 0;
+
         }
 
     }
