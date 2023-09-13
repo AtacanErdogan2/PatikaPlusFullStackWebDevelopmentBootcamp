@@ -1,0 +1,1 @@
+A program that draws an inverted triangle on the screen with stars(*) by taking the number of digits from the user.
