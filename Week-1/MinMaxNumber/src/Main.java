@@ -31,7 +31,6 @@ public class Main {
                     maxNumber = number;
                 }
             }
-
         }
 
         System.out.print("Min Number : " + minNumber + "\nMax Number : " + maxNumber);
