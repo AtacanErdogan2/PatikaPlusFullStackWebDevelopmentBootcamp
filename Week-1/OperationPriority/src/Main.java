@@ -5,7 +5,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         // Variable identification
-        int a,b,c;
+        int a, b, c;
         int result;
 
         // Retrieving data from the user
@@ -19,7 +19,7 @@ public class Main {
         c = input.nextInt();
 
         // Calculation Section
-        result = a + b * c -b;
+        result = a + b * c - b;
 
         System.out.println("Result: " + result);
 
