@@ -16,9 +16,9 @@ public class Main {
         int base, exponent, result;
 
         // Retrieving data from the user
-        System.out.print("Please enter the base number:");
+        System.out.print("Please enter the base value:");
         base = input.nextInt();
-        System.out.print("Please enter the power of base number:");
+        System.out.print("Please enter the exponential value:");
         exponent = input.nextInt();
 
         // Calculation Section
