@@ -1,3 +1,5 @@
+A program that calculates the salary of employees.
+
 In Java, you need to write a class called "Employee" that represents the factory employees and calculates their salaries
 with its methods. This class will have 4 properties and 5 methods.
 
