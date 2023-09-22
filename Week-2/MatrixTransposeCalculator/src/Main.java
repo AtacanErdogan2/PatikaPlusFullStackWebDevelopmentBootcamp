@@ -2,8 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
-    public static void printTransposeMatrix(int[][] transposeMatrix) {
-        System.out.println("\n********Transpose of the matrix********");
+    public static void printMatrix(int[][] transposeMatrix) {
         for (int[] matrix : transposeMatrix) {
             System.out.println(Arrays.toString(matrix));
         }
@@ -34,7 +33,11 @@ public class Main {
             }
         }
 
-        printTransposeMatrix(transposeMatrix);
+        System.out.println("\n********Matrix defined to the program********");
+        printMatrix(matrix);
+
+        System.out.println("\n********Transpose of the matrix********");
+        printMatrix(transposeMatrix);
 
     }
 }
