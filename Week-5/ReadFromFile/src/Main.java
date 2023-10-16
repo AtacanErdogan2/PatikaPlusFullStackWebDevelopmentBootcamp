@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            // Array of strings representing numbers
+            // Array of strings representing numbers.
             String[] numbers = {"5", "10", "20", "12", "33"};
 
             // Creating a new file named "numbers.txt"
