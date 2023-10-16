@@ -6,21 +6,10 @@ public class Main {
         // Create a Scanner object for user input
         Scanner scanner = new Scanner(System.in);
 
-        // Ask the user to write a note and store it in the 'note' variable
-        System.out.print("Please write your note:");
-        String note = scanner.nextLine();
-
-        // Define the file name where the notes will be stored
-        String fileName = "notes.txt";
-
         try {
-            // Open the file in append mode to add new notes without overwriting existing content
-            FileWriter fileWriter = new FileWriter(fileName, true);
-            PrintWriter printWriter = new PrintWriter(fileWriter);
-
-            // Write the user's note to the file and close the PrintWriter
-            printWriter.println(note);
-            printWriter.close();
+            // Define the file name where the notes will be stored
+            File fileName = new File("src/notes.txt");
+            fileName.createNewFile();
 
             // Open the file in read mode to display the stored notes
             FileReader fileReader = new FileReader(fileName);
@@ -28,6 +17,23 @@ public class Main {
 
             // Read the first line of the file (assuming there is only one line in the file)
             String readNotes = bufferedReader.readLine();
+            if (readNotes != null) {
+                System.out.println(readNotes);
+            } else {
+
+            }
+
+            // Ask the user to write a note and store it in the 'note' variable
+            System.out.print("Please write your note:");
+            String note = scanner.nextLine();
+
+            // Open the file in append mode to add new notes without overwriting existing content
+            FileWriter fileWriter = new FileWriter(fileName, false);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            // Write the user's note to the file and close the PrintWriter
+            printWriter.println(note);
+            printWriter.close();
 
             // Close the BufferedReader after reading
             bufferedReader.close();
