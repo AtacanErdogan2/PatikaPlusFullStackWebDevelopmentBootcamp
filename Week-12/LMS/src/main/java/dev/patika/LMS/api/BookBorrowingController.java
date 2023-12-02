@@ -24,23 +24,26 @@ public class BookBorrowingController {
 
     @GetMapping("/borrows")
     @ResponseStatus(HttpStatus.OK)
-    public List<BookBorrowing> findAll(){
+    public List<BookBorrowing> findAll() {
         return this.bookBorrowingManager.findAll();
     }
+
     @PostMapping("/borrows")
     @ResponseStatus(HttpStatus.CREATED)
     public BookBorrowing save(@RequestBody BookBorrowing bookBorrowing) {
         return this.bookBorrowingManager.create(bookBorrowing);
     }
+
     @PutMapping("/borrows/update/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public BookBorrowingUpdateRequest update(@PathVariable("id") Long id,@RequestBody BookBorrowing bookBorrowing) {
+    public BookBorrowingUpdateRequest update(@PathVariable("id") Long id, @RequestBody BookBorrowing bookBorrowing) {
 
-        return this.modelMapper.map(this.bookBorrowingManager.update(bookBorrowing), BookBorrowingUpdateRequest.class);
+        return this.modelMapper.map(this.bookBorrowingManager.update(id, bookBorrowing), BookBorrowingUpdateRequest.class);
     }
+
     @GetMapping("/borrows/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public BookBorrowing findById(@PathVariable("id") long id){
+    public BookBorrowing findById(@PathVariable("id") long id) {
         return this.bookBorrowingManager.getById(id);
     }
 

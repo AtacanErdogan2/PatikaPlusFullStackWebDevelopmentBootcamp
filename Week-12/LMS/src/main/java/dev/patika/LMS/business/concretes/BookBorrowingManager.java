@@ -50,67 +50,21 @@ public class BookBorrowingManager implements IBookBorrowingService {
             throw new RuntimeException("Kitabın Stoğu Bulunamamıştır.");
         }
     }
-//    @Override
-//    public BookBorrowing update(long id,BookBorrowingUpdateRequest borrowingUpdateRequest,BookBorrowing bookBorrowing) {
-//        Optional<BookBorrowing> bookBorrowingFromDb = bookBorrowingRepo.findById(id);
-//
-//        Book book = this.bookRepo.findById(bookBorrowing.getBook().getId()).orElseThrow();
-//        if(bookBorrowingFromDb.isEmpty()){
-//            throw new RuntimeException("hata");
-//        }
-//        BookBorrowing updatedBookBorrowing = bookBorrowingFromDb.get();
-//        updatedBookBorrowing.setName(borrowingUpdateRequest.getName());
-//        updatedBookBorrowing.setBorrowingDate(borrowingUpdateRequest.getBorrowingDate());
-//        updatedBookBorrowing.setReturnDate(borrowingUpdateRequest.getReturnDate());
-//
-//        if (bookBorrowing.getReturnDate() != null) {
-//            book.setStock(book.getStock() + 1);
-//            bookManager.update(book.getId(), book);
-//        }
-//
-//
-//
-//        return updatedBookBorrowing;
-//    }
-@Override
-public BookBorrowing update(BookBorrowing bookBorrowing) {
-    Book book = this.bookRepo.findById(bookBorrowing.getBook().getId()).orElseThrow();
-    if (book.getStock() >= 0) {
-        book.setStock(book.getStock()+1);
-        bookManager.update(bookBorrowing.getBook().getId(),book);
+    @Override
+    public BookBorrowing update(long id,BookBorrowing bookBorrowing) {
+        Optional<BookBorrowing> bookBorrowingFromDb = bookBorrowingRepo.findById(id);
+
+        BookBorrowing updatedBookBorrowing =bookBorrowingFromDb.get();
+        updatedBookBorrowing.setName(bookBorrowing.getName());
+        updatedBookBorrowing.setReturnDate(bookBorrowing.getReturnDate());
+        updatedBookBorrowing.setBorrowingDate(bookBorrowing.getBorrowingDate());
+        Book book = this.bookRepo.findById(bookBorrowing.getBook().getId()).orElseThrow();
+        if (book.getStock() >= 0) {
+            book.setStock(book.getStock()+1);
+            bookManager.update(bookBorrowing.getBook().getId(),book);
+        }
+        return this.bookBorrowingRepo.save(updatedBookBorrowing);
     }
-    return this.bookBorrowingRepo.save(bookBorrowing);
-}
-
-
-//    @Override
-//    public BookBorrowing create(long id, BookBorrowingRequest bookBorrowingRequest) {
-//
-//        Optional<BookBorrowing> isBorrowingExist = bookBorrowingRepo.findByNameAndBorrowingDate
-//                (bookBorrowingRequest.getName(),bookBorrowingRequest.getBorrowingDate());
-//        Book book = bookRepo.getById(id);
-//
-//
-//
-//
-//        if (book.getStock() <= 0) {
-//            throw new RuntimeException("Ödünç almak istediğiniz kitabın stoğu yoktur !!!");
-//        }
-//
-//
-//        BookBorrowing bookBorrowing = new BookBorrowing();
-//
-//        bookBorrowing.setName( bookBorrowingRequest.getName() );
-//        bookBorrowing.setBorrowingDate( bookBorrowingRequest.getBorrowingDate() );
-//
-//
-//        book.setStock(book.getStock() - 1);
-//
-//        Book bookUpdated = bookManager.update(id, book);
-//        bookBorrowing.setBook(bookUpdated);
-//        return this.bookBorrowingRepo.save(bookBorrowing);
-//
-//    }
 
     @Override
     public void delete(long id) {
