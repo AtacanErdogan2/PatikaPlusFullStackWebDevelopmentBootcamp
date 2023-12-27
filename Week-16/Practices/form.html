@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Practice</title>
+    <style>
+      body {
+        margin-top: 50px;
+        text-align: center;
+        background-color: lightgray;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      input {
+        text-align: center;
+        background-color: whitesmoke;
+        border: 1px;
+      }
+      select {
+        text-align: center;
+        background-color: whitesmoke;
+      }
+      option {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      textarea {
+        text-align: left;
+        background-color: whitesmoke;
+      }
+      button {
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="get">
+      <!--Full Name text input-->
+      <label for="name">Full Name</label> <br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+      /><br />
+      <!--Email input-->
+      <label for="email">Email</label> <br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+      <br />
+      <!--Username text input-->
+      <label for="uname">Username</label> <br />
+      <input
+        type="text"
+        id="uname"
+        name="uname"
+        maxlength="12"
+        placeholder="Max 12 characters"
+        required
+      />
+      <br />
+      <!--Password input-->
+      <label for="pwd">Password</label> <br />
+      <input
+        type="password"
+        id="pwd"
+        name="pwd"
+        minlength="8"
+        placeholder="Min 8 characters"
+      />
+      <br />
+      <hr />
+      <!--Radio-->
+      <label>Gender</label> <br />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label> <br />
+      <hr />
+      <!--Select input-->
+      <label for="fruit">Favourite Fruit</label> <br />
+      <select name="fruit" id="fruit">
+        <option value="tangerine">Tangerine</option>
+        <option value="Orange">Orange</option>
+        <option value="banana">Banana</option>
+        <option value="watermelon">Watermelon</option>
+      </select>
+      <br />
+      <hr />
+      <!--TextArea-->
+      <label for="message"> Your Message</label><br />
+      <textarea
+        name="message"
+        id="message"
+        cols="50"
+        rows="4"
+        placeholder="Please enter your message..."
+      ></textarea>
+      <br />
+      <br />
+      <!--Submit Button-->
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
