@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RestHaus</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+  <body class="p-3 mb-2 bg-dark text-white">
+    <header class="container mt-2">
+      <nav
+        class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> RestHaus </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Houses
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="for-sale.html">For Sale</a></li>
+                  <li><a class="dropdown-item" href="for-rental.html">For Rental</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="btn btn-info rounded-pill text-white"
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section class="container mt-4">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide w-75 mx-auto p-2"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://media.istockphoto.com/id/1256296335/tr/foto%C4%9Fraf/yaz-tatilinde-romantik-bir-%C3%A7ift-havuz-ba%C5%9F%C4%B1nda-akdenizde-g%C3%BCn-bat%C4%B1m%C4%B1n%C4%B1-enjos.jpg?s=2048x2048&w=is&k=20&c=p-pOcfV7nXfVwKVRwwObT0s3qBLctfW_QvFWvlt6coQ="
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.istockphoto.com/id/535761281/tr/foto%C4%9Fraf/couple-relaxing-on-hotel-rooftop.jpg?s=2048x2048&w=is&k=20&c=gy-LYuFjGCsL8fUHB3SqRxrgY33o3A655Us_SubibWI="
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.istockphoto.com/id/1393885905/tr/foto%C4%9Fraf/real-estate-agent-showing-a-mature-couple-a-new-house.jpg?s=2048x2048&w=is&k=20&c=XKo-g_oWrjrFuf2WVorJ8ac7vI0HJ6xUe24WK6DBI_M="
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://media.istockphoto.com/id/1393885905/tr/foto%C4%9Fraf/real-estate-agent-showing-a-mature-couple-a-new-house.jpg?s=2048x2048&w=is&k=20&c=XKo-g_oWrjrFuf2WVorJ8ac7vI0HJ6xUe24WK6DBI_M="
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <article class="p-2">
+        <p class="text-center fs-4">
+          Welcome to
+          <span style="color: #0088a9"> <strong>RestHaus</strong></span
+          >, your gateway to seamless online accommodations. Discover a world of
+          comfort and convenience at your fingertips. Whether it's a serene
+          getaway or a bustling urban adventure, find your perfect stay with us.
+          Browse through a curated selection of top-notch accommodations,
+          tailored to your preferences. Your ideal retreat is just a click away.
+          <span style="color: #0088a9"> <strong>Join us</strong></span> and
+          unlock a world of unforgettable stays.
+        </p>
+      </article>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
