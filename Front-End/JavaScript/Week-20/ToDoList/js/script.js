@@ -10,11 +10,10 @@ function addItemsFromStorage() {
   storedList.forEach((item) => {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.innerHTML = item;
+    li.textContent = item;
     if (item.includes("<ch>")) {
       li.classList.toggle("checked");
     }
-    toDoListDOM.appendChild(li);
     span.addEventListener("click", function () {
       deleteToDoElement(this);
     });
@@ -54,6 +53,7 @@ function addToDoElement() {
   task.value = "";
   var toast = new bootstrap.Toast(toastSuccess);
   toast.show();
+
   array.push(input);
   localStorage.setItem("list", JSON.stringify(array));
 }
@@ -93,7 +93,6 @@ function selectToDoElement(element) {
     localStorage.setItem("list", JSON.stringify(array));
   } else {
     array[array.indexOf(`${textWithoutX}<ch>`)] = `${textWithoutX}`;
-
     localStorage.setItem("list", JSON.stringify(array));
   }
 }
