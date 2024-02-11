@@ -1,7 +1,7 @@
 import Header from "./components/Header";
-import Money from "./components/Money";
+import Navbar from "./components/Navbar";
 import Card from "./components/Card";
-import Spree from "./components/Spree";
+import Footer from "./components/Footer";
 import { ItemProvider } from "./ItemContext";
 
 function App() {
@@ -9,14 +9,12 @@ function App() {
     <ItemProvider>
       <div className="container">
         <Header />
-        <Money />
+        <Navbar />
         <Card />
-        <Spree />
+        <Footer />
       </div>
     </ItemProvider>
   );
 }
-
-
 
 export default App;
