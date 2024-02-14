@@ -1,13 +1,31 @@
-// DataContext.js
 import React, { createContext, useState } from "react";
 
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  const [featuresButtons, setFeaturesButtons] = useState([
-    
-  ]);
-  const [content, setContent] = useState([
+  
+  const [btnFeatures, setBtnFeatures] = useState([
+    {
+      id: 1,
+      name: "Yoga",
+      className : "features-btn-active",
+    },
+    {
+      id: 2,
+      name: "Group",
+    },
+    {
+      id: 3,
+      name: "Solo",
+    },
+    {
+      id: 4,
+      name: "Stretching",
+    },
+  ])
+
+
+   const [content, setContent] = useState([
     {
       id: 1,
       img: "src/assets/yoga.jpg",
@@ -32,11 +50,11 @@ const DataProvider = ({ children }) => {
       category: "Stretching",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit temporibus soluta ratione sapiente sequi illo est doloribus molestiae?",
     },
-  ]); // Ensure content is initialized as an array
+  ]);
 
   return (
     <DataContext.Provider
-      value={{ featuresButtons, setFeaturesButtons, content, setContent }}
+      value={{btnFeatures, setBtnFeatures, content, setContent }}
     >
       {children}
     </DataContext.Provider>
