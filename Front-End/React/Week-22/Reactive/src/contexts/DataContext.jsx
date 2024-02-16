@@ -53,9 +53,7 @@ const DataProvider = ({ children }) => {
   ]);
 
   return (
-    <DataContext.Provider
-      value={{btnFeatures, setBtnFeatures, content, setContent }}
-    >
+    <DataContext.Provider value={{btnFeatures, setBtnFeatures, content, setContent }}>
       {children}
     </DataContext.Provider>
   );

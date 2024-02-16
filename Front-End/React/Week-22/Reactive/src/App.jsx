@@ -14,6 +14,8 @@ import { ReviewProvider } from "./contexts/ReviewContext";
 
 function App() {
   return (
+
+    
     <>
       <Hero />
       <Stat />

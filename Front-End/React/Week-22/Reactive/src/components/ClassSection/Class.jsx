@@ -1,11 +1,7 @@
 import ClassButton from "./ClassButton"
-import { useContext, useState } from "react";
-import { DataContext } from "../../contexts/DataContext";
 
 const Class = () => {
-  const { btnFeatures, setBtnFeatures, content, setContent } =
-    useContext(DataContext);
-
+  
   return (
     <section id="classes" className="classes-section center">
     <div className="classes-intro">

@@ -27,7 +27,7 @@ const Trainers = () => {
             <p>{trainer.department}</p>
           </div>
         </div>
-         ))};
+         ))}
       </div>
     </div>
   );

@@ -23,27 +23,22 @@ const BMI = () => {
       case bmi < 18.5:
         left = bmi * (15 / 18.5) + 7;
         setDynamicLeft(left);
-        console.log("calisti" + 1)
         break;
       case bmi <= 24.9:
         left = (bmi - 18.5) * (15 / 6.4) + 23.5;
         setDynamicLeft(left);
-        console.log("calisti" + 2)
         break;
       case bmi <= 29.9:
         left = (bmi - 25) * (15 / 4.9) + 40;
         setDynamicLeft(left);
-        console.log("calisti" + 3)
         break;
       case bmi <= 34.9:
         left = (bmi - 30) * (15 / 4.9) + 56.5;
         setDynamicLeft(left);
-        console.log("calisti" + 4)
         break;
       case bmi > 34.9:
         left = (bmi - 35) * (15 / 4.9) + 73;
         setDynamicLeft(left);
-        console.log("calisti" + 5)
         break;
     }
   };
@@ -71,7 +66,6 @@ const BMI = () => {
             onInput={(e) => {
               setHeight(e.target.value);
               calculateBMI();
-              console.log("hei " + e.target.value)
             }}
             required
           />
@@ -86,7 +80,6 @@ const BMI = () => {
             onInput={(e) => {
               setWeight(e.target.value);
               calculateBMI();
-              console.log("wei " + e.target.value)
             }}
             required
           />
