@@ -47,7 +47,7 @@ const Footer = () => {
         res = "$" + (cost / 1e6).toFixed(1) + "M";
         break;
       case cost >= 1e3:
-        res = "$" + (cost / 1e3).toFixed(1) + "k";
+        res = "$" + (cost / 1e3).toFixed(1) + "K";
         break;
       default:
         res = "$" + cost.toLocaleString("en-US");
